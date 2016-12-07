@@ -1,5 +1,3 @@
-from collections import defaultdict
-
 from datetime import datetime, timedelta
 from prettytable import PrettyTable
 
