@@ -23,8 +23,6 @@ def find_old_running_instance(region_name):
                             'Name': 'instance-state-name',
                             'Values': ['running']}])
 
-    ec2info = defaultdict()
-
     pt = PrettyTable(['Name', 'Type', 'State', 'Launch Time'])
     pt.align["Name"] = "l"  # Left align city names
     pt.sortby = 'Launch Time'
@@ -56,8 +54,6 @@ def find_running_instance(region_name):
     running_instances = ec2.instances.filter(Filters=[{
                             'Name': 'instance-state-name',
                             'Values': ['running']}])
-
-    ec2info = defaultdict()
 
     pt = PrettyTable(['Name', 'Type', 'OS', 'Role', 'Private IP', 'Public IP'])
     pt.align["Name"] = "l"  # Left align
